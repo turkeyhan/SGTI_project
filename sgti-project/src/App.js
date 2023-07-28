@@ -1,34 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
-
-//질문과 선택지와 대답을 받는 컴포넌트
-const MultipleChoiceQuestion = ({ question, options, onAnswer})=>{
-  const [selectedOption, setSelectedOption] = useState(null);
-  
-  
-  const handleOptionChange = (option) => {
-    setSelectedOption(option);
-    onAnswer(option);
-  };
-
-  return(
-    <div>
-      <h2>{question}</h2>
-      {options.map((option, index) => (
-        <div key={index}>
-          <input
-            type="radio"
-            id={`option${index}`}
-            value={option}
-            checked={selectedOption === option}
-            onChange={() => handleOptionChange(option)}
-          />
-          <label htmlFor={`option${index}`}>{option}</label>
-        </div>
-      ))}
-    </div>
-  )
-}
+import NavBar from './components/NavBar';
+import MultipleChoiceQuestion from './components/MultiQuestion';
 
 const App = () => {
   const [answers, setAnswers] = useState({});
@@ -47,7 +20,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>심리테스트</h1>
+      <header>
+        <h1 className="Home">SGTI</h1>
+        <NavBar />
+      </header>
       <MultipleChoiceQuestion
         question="알바트로스 탑을 보면 무슨 생각이 드나요?"
         options={['아무 생각이 안듦', '아름다움', '심리적 안정을 얻음', '배고픔', '부수고 싶음']}
