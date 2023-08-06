@@ -37,6 +37,7 @@ const Result = () => {
     
     const Setfunction = () => {
         setType(maxIdx);    
+    }
 
 
     return(
