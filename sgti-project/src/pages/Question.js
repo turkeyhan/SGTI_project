@@ -158,8 +158,8 @@ const Question = () => {
                 //마지막 질문이라면
                 <div>
                     <h1>Q{Qnum + 1}: {questions[Qnum].question}</h1>
-                    <button><Link to={{pathname: `/Result`,
-                    state: {
+                    <button><Link to={`/Result`}
+                    state= {{
                         score1: saveScore[0],
                         score2: saveScore[1],
                         score3: saveScore[2],
@@ -168,9 +168,9 @@ const Question = () => {
                         score6: saveScore[5],
                         score7: saveScore[6],
                         score8: saveScore[7]
-                    }}}>{questions[Qnum].sel1}</Link></button> <br></br>
-                    <button><Link to={{pathname: `/Result`,
-                    state: {
+                    }}>{questions[Qnum].sel1}</Link></button> <br></br>
+                    <button><Link to={`/Result`}
+                    state= {{
                         score1: saveScore[0],
                         score2: saveScore[1],
                         score3: saveScore[2],
@@ -179,9 +179,9 @@ const Question = () => {
                         score6: saveScore[5],
                         score7: saveScore[6],
                         score8: saveScore[7]
-                    }}}>{questions[Qnum].sel2}</Link></button> <br></br>
-                    <button><Link to={{pathname: `/Result`,
-                    state: {
+                    }}>{questions[Qnum].sel2}</Link></button> <br></br>
+                    <button><Link to={`/Result`}
+                    state= {{
                         score1: saveScore[0],
                         score2: saveScore[1],
                         score3: saveScore[2],
@@ -190,9 +190,9 @@ const Question = () => {
                         score6: saveScore[5],
                         score7: saveScore[6],
                         score8: saveScore[7]
-                    }}}>{questions[Qnum].sel3}</Link></button> <br></br>
-                    <button><Link to={{pathname: `/Result`,
-                    state: {
+                    }}>{questions[Qnum].sel3}</Link></button> <br></br>
+                    <button><Link to={`/Result`}
+                    state= {{
                         score1: saveScore[0],
                         score2: saveScore[1],
                         score3: saveScore[2],
@@ -201,7 +201,7 @@ const Question = () => {
                         score6: saveScore[5],
                         score7: saveScore[6],
                         score8: saveScore[7]
-                    }}}>{questions[Qnum].sel4}</Link></button> <br></br>
+                    }}>{questions[Qnum].sel4}</Link></button> <br></br>
                 </div>
                 : 
                 //마지막 질문이 아니라면
